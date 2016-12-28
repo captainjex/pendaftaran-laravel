@@ -11,20 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-//admin
-Route::get('/admin', function () {
-    return view('admin.tes');
-});
-Route::get('/admin/peserta', 'DaftarController@index');
-
-
 //daftar baru
 Route::get('/daftar', 'DaftarController@create');
 //simpan pendaftar
 Route::post('/daftar', 'DaftarController@store');
+
+//admin
+Route::get('/admin', 'DaftarController@admin');
+Route::get('/peserta', 'DaftarController@index');
+
+// Route::get('/peserta/{slug}', 'DaftarController@show');
+Route::get('/peserta/{id}', 'DaftarController@edit')->name('peserta.edit');
+Route::post('/peserta/{id}', 'DaftarController@update');
+
 
 // Auth::routes();
 // Authentication Routes...

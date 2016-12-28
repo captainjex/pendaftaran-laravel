@@ -31,7 +31,8 @@
     <ul class="sidebar-menu">
       <li class="header">HEADER</li>
       <!-- Optionally, you can add icons to the links -->
-      <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
+      <li><a href="/peserta"><i class="fa fa-link"></i> <span>Peserta</span></a></li>
+      <li><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
       <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
       <li class="treeview">
         <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>

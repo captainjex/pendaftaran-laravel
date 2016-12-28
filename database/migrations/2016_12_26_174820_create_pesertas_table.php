@@ -16,11 +16,13 @@ class CreatePesertasTable extends Migration
         Schema::create('pesertas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->integer('hp');
             $table->integer('divisi_id')->unsigned();
             $table->text('alasan');
+            $table->integer('periksa')->default(0);
             $table->integer('diperiksa_oleh')->unsigned()->nullable();
+            $table->string('slug');
             $table->timestamps();
         });
 

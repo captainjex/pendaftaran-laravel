@@ -11,7 +11,7 @@ class Peserta extends Model
 {
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo('App\User', 'diperiksa_oleh');
     }
 
     public function divisi()

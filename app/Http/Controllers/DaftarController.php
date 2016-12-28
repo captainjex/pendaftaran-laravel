@@ -14,7 +14,12 @@ class DaftarController extends Controller
 {
     public function __construct()
     {
-        //$this->middleware('auth');
+        $this->middleware('auth', ['except' => ['create', 'store']]);
+    }
+
+    public function admin()
+    {
+        return view('admin.tes');
     }
 
     public function create(){
@@ -30,6 +35,7 @@ class DaftarController extends Controller
         $peserta->hp = $request->hp;
         $peserta->divisi_id = $request->divisi;
         $peserta->alasan = $request->alasan;
+        $peserta->slug = str_slug($peserta->email);
 
 
         $peserta->save();
@@ -44,5 +50,32 @@ class DaftarController extends Controller
         $users = User::all();
 
         return view('admin.daftar', compact('pesertas', 'divisis', 'users'));
+    }
+
+    public function show($id)
+    {
+
+    }
+
+    public function edit($id)
+    {
+        $peserta = Peserta::where('id',$id)->first();
+        if (Auth::user()){
+            return view('admin.edit', compact('peserta'));
+        } else{
+            return redirect()->to("/peserta");
+        }
+    }
+
+    public function update(Request $request)
+    {
+        $peserta = Peserta::find($id);
+
+        $peserta->diperiksa_oleh = $request->input('id');
+
+        $Pemain->save();
+
+        return redirect('/peserta');
+
     }
 }

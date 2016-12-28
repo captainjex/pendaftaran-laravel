@@ -60,31 +60,6 @@ class DatabaseSeeder extends Seeder
             'created_at' => date("Y-m-d H:i:s"),
             'updated_at' => date("Y-m-d H:i:s")],
 
-
-            ['nama' => str_random(8),
-            'email' => str_random(8).'@gmail.com',
-            'hp' =>  intval( "0"."8".rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9). rand(0,9).rand(0,9).rand(0,9) ),
-            'divisi_id' => rand(1,3),
-            'alasan' => substr(str_repeat($content, 15), 0, 420),
-            'created_at' => date("Y-m-d H:i:s"),
-            'updated_at' => date("Y-m-d H:i:s")],
-
-            ['nama' => str_random(8),
-            'email' => str_random(8).'@gmail.com',
-            'hp' =>  intval( "0"."8".rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9). rand(0,9).rand(0,9).rand(0,9) ),
-            'divisi_id' => rand(1,3),
-            'alasan' => substr(str_repeat($content, 15), 0, 420),
-            'created_at' => date("Y-m-d H:i:s"),
-            'updated_at' => date("Y-m-d H:i:s")],
-
-            ['nama' => str_random(8),
-            'email' => str_random(8).'@gmail.com',
-            'hp' =>  intval( "0"."8".rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9). rand(0,9).rand(0,9).rand(0,9) ),
-            'divisi_id' => rand(1,3),
-            'alasan' => substr(str_repeat($content, 15), 0, 420),
-            'created_at' => date("Y-m-d H:i:s"),
-            'updated_at' => date("Y-m-d H:i:s")],
-
         ]);
         }
     }

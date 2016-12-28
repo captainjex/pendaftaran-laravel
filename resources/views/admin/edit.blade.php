@@ -8,7 +8,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-9">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h1 class="panel-title">{{ $peserta->id}} - {{ $peserta->nama }}</h1>
@@ -40,22 +40,31 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         @if (!$peserta->diperiksa_oleh)
-                            <td> belum </td>
+
                         @else
-                            <td>edit</td>
+
                         @endif
                     </div>
                     <div class="panel-body">
                         mendaftar pada:<br>
                         <strong>{{ $peserta->created_at->diffForHumans() }}</strong>
                         <br><br>
-                        update terakhir: <br>
-                        <strong>{{ $peserta->updated_at->diffForHumans() }}</strong>
-                        <br><br>
+                        @if (!$peserta->diperiksa_oleh)
+                            <div class="alert alert-danger" role="">Belum diperiksa</div>
+                            {{-- <td><a href="{{ route('peserta.edit', $peserta->id) }}" class="btn btn-danger btn-block">belum</a> </td>
+                            <td class="bg-danger"><span>belum diperiksa</span></td>
+                            <td><a href="{{ route('peserta.edit', $peserta->id) }}" class="btn btn-danger btn-block">Periksa</a></td> --}}
+                        @else
+                            diperiksa oleh: <br>
+                            <strong><big>{{ $peserta->user->name }}</big></strong>
+                            <br>
+                            <strong>{{ $peserta->updated_at->diffForHumans() }}</strong>
+                            <br><br>
+                        @endif
                     </div>
                 </div>
             </div>

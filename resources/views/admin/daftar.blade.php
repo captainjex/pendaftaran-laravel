@@ -20,39 +20,14 @@
                         <th>email</th>
                         <th>hp</th>
                         <th>divisi</th>
+                        <th>daftar pada</th>
                         <th>diperiksa oleh</th>
-                        <th>created at</th>
-                        <th>updated at</th>
-                        <th>tombol</th>
+                        <th>diperiksa pada</th>
+                        <th>pilihan</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
-                        <td>X</td>
-                        <td>X</td>
-                        <td>X</td>
-                        <td>X</td>
-                        <td>X</td>
-                    </tr>
-                    <tr>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 5.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td>5</td>
-                        <td>C</td>
-                        <td>C</td>
-                        <td>C</td>
-                        <td>C</td>
-                        <td>C</td>
-                    </tr>
+                    
                     @foreach ($pesertas as $peserta)
                         <tr>
                             <td>{{ $peserta->id }}</td>
@@ -60,19 +35,17 @@
                             <td>{{ $peserta->email }}</td>
                             <td>{{ $peserta->hp }}</td>
                             <td>{{ $peserta->divisi->nama }}</td>
+                            <td>{{ $peserta->created_at->diffForHumans() }}</td>
                             @if (!$peserta->diperiksa_oleh)
                                 <td><a href="{{ route('peserta.edit', $peserta->id) }}" class="btn btn-danger btn-block">belum</a> </td>
-                            @else
-                                <td><a href="" class="btn btn-success btn-block">{{ $peserta->user->name }}</a> </td>
-                            @endif
-                            {{-- <td>{{ $peserta->diperiksa_oleh}}</td> --}}
-                            <td>{{ $peserta->created_at->diffForHumans() }}</td>
-                            <td>{{ $peserta->updated_at->diffForHumans() }}</td>
-                            @if (!$peserta->diperiksa_oleh)
+                                <td class="bg-danger"><span>belum diperiksa</span></td>
                                 <td><a href="{{ route('peserta.edit', $peserta->id) }}" class="btn btn-danger btn-block">Periksa</a></td>
                             @else
+                                <td class="bg-success text-center">{{ $peserta->user->name }}</td>
+                                <td class="bg-success">{{ $peserta->updated_at->diffForHumans() }}</td>
                                 <td><a href="{{ route('peserta.edit', $peserta->id) }}" class="btn btn-primary btn-block">Lihat</a></td>
                             @endif
+                            {{-- <td>{{ $peserta->diperiksa_oleh}}</td> --}}
 
                         </tr>
                     @endforeach
@@ -85,10 +58,10 @@
                         <th>email</th>
                         <th>hp</th>
                         <th>divisi</th>
+                        <th>daftar pada</th>
                         <th>diperiksa oleh</th>
-                        <th>created at</th>
-                        <th>updated at</th>
-                        <th>tombol</th>
+                        <th>diperiksa pada</th>
+                        <th>pilihan</th>
                     </tr>
                 </tfoot>
             </table>

@@ -32,4 +32,9 @@ class User extends Authenticatable
     public function pesertas(){
         return $this->hasMany(Peserta::class);
     }
+
+    public function getAvatar()
+    {
+        return "https://www.gravatar.com/avatar/" . md5($this->email) . "?d=mm&s=50";
+    }
 }

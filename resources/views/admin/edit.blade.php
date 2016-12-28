@@ -6,9 +6,9 @@
 
 @section('content')
 
-    <div class="container">
+    {{-- <div class="container"> --}}
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-7 col-md-offset-1">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h1 class="panel-title">{{ $peserta->id}} - {{ $peserta->nama }}</h1>
@@ -54,7 +54,7 @@
                         <strong>{{ $peserta->created_at->diffForHumans() }}</strong>
                         <br><br>
                         @if (!$peserta->diperiksa_oleh)
-                            <div class="alert alert-danger" role="">Belum diperiksa</div>
+                            <div class="callout callout-danger" role="">Belum diperiksa</div>
                             {{-- <td><a href="{{ route('peserta.edit', $peserta->id) }}" class="btn btn-danger btn-block">belum</a> </td>
                             <td class="bg-danger"><span>belum diperiksa</span></td>
                             <td><a href="{{ route('peserta.edit', $peserta->id) }}" class="btn btn-danger btn-block">Periksa</a></td> --}}
@@ -69,6 +69,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    {{-- </div> --}}
 
 @endsection

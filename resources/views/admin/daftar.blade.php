@@ -8,7 +8,7 @@
 
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Data Table With Full Features</h3>
+            <h3 class="box-title"></h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -27,7 +27,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
+
                     @foreach ($pesertas as $peserta)
                         <tr>
                             <td>{{ $peserta->id }}</td>

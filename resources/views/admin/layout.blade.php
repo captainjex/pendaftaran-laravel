@@ -56,6 +56,7 @@
     <script src="{{ asset('AdminLTE/dist/js/app.min.js') }}"></script>
     <!-- DataTables -->
     <script src="{{ asset('AdminLTE/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="https://cdn.datatables.net/plug-ins/1.10.13/sorting/num-html.js"></script>
     <script src="{{ asset('AdminLTE/plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
     <!-- SlimScroll -->
     <script src="{{ asset('AdminLTE/plugins/slimScroll/jquery.slimscroll.min.j') }}s"></script>
@@ -66,7 +67,11 @@
     <!-- page script -->
     <script>
     $(function () {
-        $("#example1").DataTable();
+        $("#example1").DataTable({
+            columnDefs: [
+               { type: 'num-html', targets: 0 }
+             ]
+        });
     });
     </script>
 

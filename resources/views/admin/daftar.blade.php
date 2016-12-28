@@ -20,7 +20,6 @@
                         <th>email</th>
                         <th>hp</th>
                         <th>divisi</th>
-                        <th>alasan</th>
                         <th>diperiksa oleh</th>
                         <th>created at</th>
                         <th>updated at</th>
@@ -40,7 +39,6 @@
                         <td>X</td>
                         <td>X</td>
                         <td>X</td>
-                        <td>X</td>
                     </tr>
                     <tr>
                         <td>Trident</td>
@@ -54,7 +52,6 @@
                         <td>C</td>
                         <td>C</td>
                         <td>C</td>
-                        <td>C</td>
                     </tr>
                     @foreach ($pesertas as $peserta)
                         <tr>
@@ -63,7 +60,6 @@
                             <td>{{ $peserta->email }}</td>
                             <td>{{ $peserta->hp }}</td>
                             <td>{{ $peserta->divisi->nama }}</td>
-                            <td>{{ $peserta->alasan }}</td>
                             @if (!$peserta->diperiksa_oleh)
                                 <td><a href="{{ route('peserta.edit', $peserta->id) }}" class="btn btn-danger btn-block">belum</a> </td>
                             @else
@@ -75,7 +71,7 @@
                             @if (!$peserta->diperiksa_oleh)
                                 <td><a href="{{ route('peserta.edit', $peserta->id) }}" class="btn btn-danger btn-block">Periksa</a></td>
                             @else
-                                <td><a href="{{ route('peserta.edit', $peserta->id) }}" class="btn btn-primary btn-block">Periksa</a></td>
+                                <td><a href="{{ route('peserta.edit', $peserta->id) }}" class="btn btn-primary btn-block">Lihat</a></td>
                             @endif
 
                         </tr>
@@ -89,7 +85,6 @@
                         <th>email</th>
                         <th>hp</th>
                         <th>divisi</th>
-                        <th>alasan</th>
                         <th>diperiksa oleh</th>
                         <th>created at</th>
                         <th>updated at</th>

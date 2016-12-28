@@ -22,7 +22,6 @@ class CreatePesertasTable extends Migration
             $table->text('alasan');
             $table->integer('periksa')->default(0);
             $table->integer('diperiksa_oleh')->unsigned()->nullable();
-            $table->string('slug');
             $table->timestamps();
         });
 

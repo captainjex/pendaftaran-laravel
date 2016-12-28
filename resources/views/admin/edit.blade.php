@@ -15,23 +15,28 @@
                     </div>
                     <div class="panel-body">
                         nama: <br>
-                        <strong>{{ $peserta->nama }}</strong>
+                        <p><strong>{{ $peserta->nama }}</strong></p>
                         <br><br>
                         email: <br>
-                        <strong>{{ $peserta->email }}</strong>
+                        <p><strong>{{ $peserta->email }}</strong></p>
                         <br><br>
                         no. hp: <br>
-                        <strong>{{ $peserta->hp }}</strong>
+                        <p><strong>{{ $peserta->hp }}</strong></p>
                         <br><br>
                         divisi: <br>
-                        <strong>{{ $peserta->divisi->nama }}</strong>
+                        <p><strong>{{ $peserta->divisi->nama }}</strong></p>
                         <br><br>
                         alasan: <br>
-                        <strong>{{ $peserta->alasan }}</strong>
+                        <p><strong>{{ $peserta->alasan }}</strong></p>
                         <br><br>
                     </div>
                     <div class="panel-footer">
-
+                        <form class="" action="" method="post">
+                            {{ csrf_field() }}
+                            <input type="hidden" name="id" value="{{$peserta->id}}">
+                            <input type="hidden" name="diperiksa_oleh" value="{{ Auth::user()->id }}">
+                            <input type="submit" name='publish'  value = "Periksa" class="btn btn-primary"/>
+                        </form>
                     </div>
                 </div>
             </div>

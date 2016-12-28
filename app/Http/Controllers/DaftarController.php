@@ -69,11 +69,12 @@ class DaftarController extends Controller
 
     public function update(Request $request)
     {
+        $id = $request->input('id');
         $peserta = Peserta::find($id);
 
-        $peserta->diperiksa_oleh = $request->input('id');
+        $peserta->diperiksa_oleh = $request->input('diperiksa_oleh');
 
-        $Pemain->save();
+        $peserta->save();
 
         return redirect('/peserta');
 

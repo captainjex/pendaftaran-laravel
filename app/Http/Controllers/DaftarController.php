@@ -35,7 +35,6 @@ class DaftarController extends Controller
         $peserta->hp = $request->hp;
         $peserta->divisi_id = $request->divisi;
         $peserta->alasan = $request->alasan;
-        $peserta->slug = str_slug($peserta->email);
 
 
         $peserta->save();

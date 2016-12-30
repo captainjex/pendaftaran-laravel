@@ -37,7 +37,7 @@
                             <td>{{ $peserta->divisi->nama }}</td>
                             <td>{{ $peserta->created_at->diffForHumans() }}</td>
                             @if (!$peserta->diperiksa_oleh)
-                                <td><a href="{{ route('peserta.edit', $peserta->id) }}" class="btn btn-danger btn-block">belum</a> </td>
+                                <td><a href="{{ route('peserta.edit', $peserta->id) }}" class="btn btn-danger btn-block">&nbsp;belum</a> </td>
                                 <td class="bg-danger"><span>belum diperiksa</span></td>
                                 <td><a href="{{ route('peserta.edit', $peserta->id) }}" class="btn btn-danger btn-block">Periksa</a></td>
                             @else

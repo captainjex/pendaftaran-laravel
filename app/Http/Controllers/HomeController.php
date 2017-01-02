@@ -35,6 +35,6 @@ class HomeController extends Controller
     public function show($slug)
     {
         $berita = Berita::whereSlug($slug)->first();
-        return view('berita.lihat', compact('berita'));
+        return view('berita.lihatsaja', compact('berita'));
     }
 }

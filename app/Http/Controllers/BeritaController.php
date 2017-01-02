@@ -33,7 +33,7 @@ class BeritaController extends Controller
 
         $berita->save();
 
-        return redirect('/admin');
+        return redirect('/list-berita');
     }
 
     public function index()

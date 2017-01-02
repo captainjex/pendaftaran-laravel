@@ -12,6 +12,7 @@
 */
 Route::get('/', 'HomeController@index');
 Route::post('/', 'TamuController@store');
+Route::get('/lihat-berita/{slug}','HomeController@show');
 
 
 

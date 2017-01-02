@@ -6,8 +6,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h1 class="title">Telolet Community</h1>
-                        <h4>Every landing page needs a small description after the big bold title, that's why we added this text here. Add here all the information that can make you or your product create the first impression.</h4>
+                        <h1 class="title">Telolet Conference</h1>
+                        <h4>Konferensi paling keren di dunia yang pernah ada. Eh bukan cuma dunia deng, seluruh alam semesta, bahkan sampai planet namek. Ikutlah bersama kami dan buat dunia berisik. Om telolet, om! </h4>
                         <br />
                         <a href="/daftar" class="btn btn-danger btn-raised btn-lg">
                             DAFTAR
@@ -22,12 +22,12 @@
                 <div class="section text-center section-landing">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <h2 class="title">Let's talk product</h2>
-                            <h5 class="description">This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious, otherwise he wouldn't scroll to get here. Add a button if you want the user to see more.</h5>
+                            <h2 class="title">Telolet Conference</h2>
+                            <h5 class="description">Konferensi paling keren di dunia yang pernah ada. Eh bukan cuma dunia deng, seluruh alam semesta, bahkan sampai planet namek. Ikutlah bersama kami dan buat dunia berisik. Om telolet, om! </h5>
                         </div>
                     </div>
 
-                    <div class="features">
+                    {{-- <div class="features">
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="info">
@@ -57,34 +57,36 @@
                                 </div>
                             </div>
                         </div>
+                    </div> --}}
+                </div>
+
+                <div class="section text-center">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h2 class="title">Segera Daftar ke telolet conference</h2>
+                            <h5 class="description"></h5>
+                        </div>
+                        <div class="col-md-2 col-md-offset-5">
+
+                            <a href="/daftar" class="btn btn-danger btn-raised btn-lg center-block">DAFTAR</a>
+
+                        </div>
                     </div>
                 </div>
+
 
                 <div class="section text-center">
                     <h2 class="title">Kabar Telolet</h2>
 
                     <div class="team">
                         <div class="row">
-                            {{-- <div class="col-md-4">
-                                <div class="team-player card ">
-                                    <img src="/material/img/avatar.jpg" alt="Thumbnail Image" class="img-raised img-circle">
-                                    <h4 class="title">Gigi Hadid <br />
-                                        <small class="text-muted">Model</small>
-                                    </h4>
-                                    <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                                    <a href="#pablo" class="btn btn-simple btn-just-icon"><i class="fa fa-twitter"></i></a>
-                                    <a href="#pablo" class="btn btn-simple btn-just-icon"><i class="fa fa-instagram"></i></a>
-                                    <a href="#pablo" class="btn btn-simple btn-just-icon btn-default"><i class="fa fa-facebook-square"></i></a>
-                                </div>
-                            </div> --}}
-                            @foreach ($beritas->slice(0,3) as $berita)
+                            @foreach ($beritas->slice(0,6) as $berita)
                                 <div class="col-md-4">
                                     <div class="team-player card">
                                         <img src="/material/img/christian.jpg" alt="Thumbnail Image" class="img-raised img-circle">
-                                        <h4 class="title"><a href="/berita/{{ $berita->slug }}">{{ $berita->title }}</a><br /></h4>
+                                        <h4 class="title"><a href="/lihat-berita/{{ $berita->slug }}">{{ $berita->title }}</a><br /><small>oleh <strong>{{ $berita->user->name }}</strong></small></h4>
                                         <p class="description">{{ str_limit($berita->body, 160) }}</p>
-                                        <a href="#pablo" class="btn btn-simple btn-just-icon"><i class="fa fa-twitter"></i></a>
-                                        <a href="#pablo" class="btn btn-simple btn-just-icon"><i class="fa fa-linkedin"></i></a>
+                                        <a href="/lihat-berita/{{ $berita->slug }}">selengkapnya</a>
                                     </div>
                                 </div>
                             @endforeach
@@ -93,6 +95,7 @@
                     </div>
 
                 </div>
+
 
 
                 <div class="section landing-section">

@@ -15,7 +15,7 @@
         <div class="box-body">
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
-                    <tr>
+                    <tr class="bg-gray">
                         <th>nama</th>
                         <th>email</th>
                         <th>created at</th>
@@ -41,7 +41,7 @@
 
                 </tbody>
                 <tfoot>
-                    <tr>
+                    <tr class="bg-gray">
                         <th>nama</th>
                         <th>email</th>
                         <th>created at</th>

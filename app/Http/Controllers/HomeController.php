@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\User;
+use App\Berita;
+
 class HomeController extends Controller
 {
     /**
@@ -24,7 +27,14 @@ class HomeController extends Controller
     public function index()
     {
         $beritas = Berita::all();
+        $users = User::all();
 
-        return view('home', compact('beritas'));
+        return view('home', compact('beritas', 'users'));
+    }
+
+    public function show($slug)
+    {
+        $berita = Berita::whereSlug($slug)->first();
+        return view('berita.lihat', compact('berita'));
     }
 }

@@ -20,16 +20,17 @@
     <ul class="sidebar-menu">
       <li class="header">MENU</li>
       <!-- Optionally, you can add icons to the links -->
-      <li><a href="/peserta"><i class="fa fa-link"></i> <span>Peserta</span></a></li>
-      <li><a href="/bukutamu"><i class="fa fa-link"></i> <span>Buku Tamu</span></a></li>
+      <li><a href="/peserta"><i class="fa fa-registered"></i> <span>Peserta</span></a></li>
+      <li><a href="/bukutamu"><i class="fa fa-book"></i> <span>Buku Tamu</span></a></li>
+      <li><a href="/list-berita"><i class="fa fa-newspaper-o"></i> <span>Berita</span></a></li>
       <li class="treeview">
-        <a href="#"><i class="fa fa-link"></i> <span>User</span>
+        <a href="#"><i class="fa fa-user"></i> <span>User</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="/listuser">List User</a></li>
+          <li><a href="/listuser"><i class="fa fa-circle-o"></i> List User</a></li>
           <li><a href="#">Link in level 2</a></li>
         </ul>
       </li>

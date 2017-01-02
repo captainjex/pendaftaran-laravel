@@ -8,7 +8,7 @@
     <!-- Horizontal Form -->
     <div class="box box-info">
         <div class="box-header with-border">
-            
+
         </div>
         <!-- /.box-header -->
         <!-- form start -->
@@ -21,7 +21,7 @@
             @endif
           </div>
           <div class="form-group">
-            <textarea name="body" class="form-control">{{ old('body') }}</textarea>
+            <textarea name="body" class="form-control" rows="15">{{ old('body') }}</textarea>
           </div>
           <input type="submit" name='publish' class="btn btn-success" value = "Publikasikan"/>
         </form>

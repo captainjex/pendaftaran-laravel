@@ -39,10 +39,9 @@ Route::get('/tambah-berita','BeritaController@create');
 Route::post('/tambah-berita','BeritaController@store');
 
 Route::get('/berita/{slug}','BeritaController@show');
-Route::get('/berita/{slug}/edit','BeritaController@edit');
+Route::get('/berita/{slug}/edit','BeritaController@edit')->name('berita.edit');
 Route::post('/berita/{slug}/edit','BeritaController@update');
-
-
+Route::get('/berita/hapus/{id}','BeritaController@destroy');
 
 
 

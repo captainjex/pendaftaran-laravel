@@ -24,23 +24,11 @@
            <!-- /.box-header -->
            <div class="box-body table-responsive no-padding">
              <table class="table table-hover">
-               <tr>
+               <tr class="bg-gray">
                  <th>nama</th>
                  <th>email</th>
                  <th>pesan</th>
                  <th>waktu</th>
-               </tr>
-               <tr>
-                 <td>183</td>
-                 <td>John Doe</td>
-                 <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                 <td>11-7-2014</td>
-               </tr>
-               <tr>
-                 <td>219</td>
-                 <td>Alexander Pierce</td>
-                 <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                 <td>11-7-2014</td>
                </tr>
                @foreach ($tamus as $tamu)
                    <tr>

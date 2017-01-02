@@ -10,6 +10,11 @@ use App\Berita;
 
 class BeritaController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function create(){
         return view('admin.beritatambah');
     }
@@ -44,4 +49,39 @@ class BeritaController extends Controller
         $berita = Berita::whereSlug($slug)->first();
         return view('berita.lihat', compact('berita'));
     }
+
+    public function edit($slug)
+    {
+       $berita = Berita::where('slug',$slug)->first();
+       if($berita && (Auth::user()->id == $berita->user_id )){
+           return view('berita.edit')->with('berita',$berita);
+       }else {
+           return redirect('/')->withErrors('Kamu tidak boleh mengakses halaman');
+       }
+    }
+
+    public function update(Request $request)
+    {
+        $id = $request->input('id');
+        $berita = Berita::find($id);
+
+        $berita->title = $request->input('title');
+        $berita->body = $request->input('body');
+        $berita->slug = str_slug($berita->title);
+
+        $berita->save();
+
+        return redirect('/list-berita');
+
+    }
+
+    public function destroy($id)
+    {
+        $berita = Berita::find($id);
+        $berita->delete();
+
+        return redirect('/list-berita');
+
+    }
+
 }

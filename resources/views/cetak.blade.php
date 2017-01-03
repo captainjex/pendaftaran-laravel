@@ -59,7 +59,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <td>{{ $blog->id }}</td>
                             <td>{{ $blog->name }}</td>
                             <td>{{ $blog->email }}</td>
-                            <td>{{ $blog->creted_at }}</td>
+                            <td>{{ $blog->created_at }}</td>
                         </tr>
                     @endforeach
                 </tbody>

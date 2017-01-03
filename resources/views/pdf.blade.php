@@ -13,7 +13,7 @@
                         <th>ID</th>
                         <th>nama</th>
                         <th>email</th>
-                        <th>crated at</th>
+                        <th>waktu masuk</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -22,7 +22,7 @@
                             <td>{{ $blog->id }}</td>
                             <td>{{ $blog->name }}</td>
                             <td>{{ $blog->email }}</td>
-                            <td>{{ $blog->creted_at }}</td>
+                            <td>{{ $blog->created_at }}</td>
                         </tr>
                     @endforeach
                 </tbody>

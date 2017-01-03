@@ -44,6 +44,12 @@ Route::get('/berita/{slug}/edit','BeritaController@edit')->name('berita.edit');
 Route::post('/berita/{slug}/edit','BeritaController@update');
 Route::get('/berita/hapus/{id}','BeritaController@destroy');
 
+Route::get('/cetak', array('as'=>'htmltopdf', 'uses'=>'PdfController@users'));
+
+
+
+
+
 
 
 // Auth::routes();

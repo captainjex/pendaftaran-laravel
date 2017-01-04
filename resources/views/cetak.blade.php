@@ -39,7 +39,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <body class="hold-transition">
     <div class="wrapper">
         <div class="container">
-            <h2>All users</h2>
+            <h2>Data Pendaftar</h2>
             <div class="btn-group">
                 <a href="{{ route('htmltopdf',['download'=>'pdf']) }}" class="btn btn-primary btn-lg">PDF</a>
             </div>

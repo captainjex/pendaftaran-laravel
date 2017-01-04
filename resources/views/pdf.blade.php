@@ -6,7 +6,7 @@
     </head>
     <body>
         <div class="container">
-            <h2>All User data to Pdf</h2>
+            <h2>Data Pendaftar</h2>
             <table width="100%" border="1">
                 <thead>
                     <tr>

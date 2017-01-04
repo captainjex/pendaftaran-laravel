@@ -37,6 +37,10 @@ class User extends Authenticatable
         return $this->hasMany(Berita::class);
     }
 
+    public function datatoPdf(){
+        return $this->hasMany(DatatoPdf::class);
+    }
+
     public function getAvatar()
     {
         return "https://www.gravatar.com/avatar/" . md5($this->email) . "?d=mm&s=50";

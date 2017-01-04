@@ -9,6 +9,7 @@
     <div class="box">
         <div class="box-header">
             <h3 class="box-title"></h3>
+            <a href="{{ route('htmltopdf',['download'=>'pdf']) }}" class="btn btn-primary btn-lg ">Export to Pdf</a>
         </div>
         <!-- /.box-header -->
         <div class="box-body">

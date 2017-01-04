@@ -7,22 +7,26 @@
     <body>
         <div class="container">
             <h2>All User data to Pdf</h2>
-            <table class="table table-striped">
+            <table width="100%" border="1">
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>nama</th>
                         <th>email</th>
-                        <th>waktu masuk</th>
+                        <th>hp</th>
+                        <th>divisi</th>
+                        <th>tgl daftar</th>
+                        <th>diperiksa oleh</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($blogs as $blog)
                         <tr>
-                            <td>{{ $blog->id }}</td>
-                            <td>{{ $blog->name }}</td>
+                            <td>{{ $blog->nama }}</td>
                             <td>{{ $blog->email }}</td>
+                            <td>{{ $blog->hp }}</td>
+                            <td>{{ $blog->mama }}</td>
                             <td>{{ $blog->created_at }}</td>
+                            <td>{{ $blog->nana }}</td>
                         </tr>
                     @endforeach
                 </tbody>

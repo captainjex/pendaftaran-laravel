@@ -47,19 +47,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>nama</th>
                         <th>email</th>
-                        <th>crated at</th>
+                        <th>hp</th>
+                        <th>divisi</th>
+                        <th>tgl daftar</th>
+                        <th>diperiksa oleh</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($blogs as $blog)
                         <tr>
-                            <td>{{ $blog->id }}</td>
-                            <td>{{ $blog->name }}</td>
+                            <td>{{ $blog->nama }}</td>
                             <td>{{ $blog->email }}</td>
+                            <td>{{ $blog->hp }}</td>
+                            <td>{{ $blog->mama }}</td>
                             <td>{{ $blog->created_at }}</td>
+                            <td>{{ $blog->nana }}</td>
                         </tr>
                     @endforeach
                 </tbody>
